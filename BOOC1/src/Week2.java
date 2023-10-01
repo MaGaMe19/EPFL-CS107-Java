@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Week2 {
     public static void main(String[] args) {
-        // Chapitre 5 : structures de contrôle
+        // Chapitre 5 : structures de contrôle (1)
         // ================================================ branchements conditionnels
         Scanner bob = new Scanner(System.in);
         System.out.print("Donne moi un nombre : ");
@@ -26,6 +26,10 @@ public class Week2 {
         */
 
         // ================================================ opérateurs logiques
-
+        /*
+        - &&    qui signifie AND
+        - ||    qui signifie OR
+        - !     qui signifie NOT
+         */
     }
 }
