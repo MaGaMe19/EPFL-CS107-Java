@@ -1,4 +1,4 @@
-public class Week1_2 {
+public class Week1and2 {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
