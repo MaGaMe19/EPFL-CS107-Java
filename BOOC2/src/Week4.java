@@ -2,6 +2,15 @@ public class Week4 {
     public static void main(String[] args) {
         Figure circle = new Circle(15);
         System.out.println(circle.surface());
+
+        Figure square1 = new Square(20);
+        System.out.println(square1.circumference());
+
+        Figure square2 = new Square(30);
+        System.out.printf("square1 equals square2: %b\n", square1.equals(square2));
+
+        Figure square3 = new Square(30);
+        System.out.printf("square2 equals square3: %b\n", square2.equals(square3));
     }
 }
 
@@ -15,19 +24,45 @@ abstract class Figure {
 }
 
 class Circle extends Figure {
-   private double radius;
+   private final double radius;
 
    public Circle(double r) {
        this.radius = r;
    }
 
     @Override
+    public double surface() {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    @Override
     public double circumference() {
         return 2 * this.radius * Math.PI;
+    }
+}
+
+class Square extends Figure {
+    private final double length;
+
+    public Square(double width) {
+       this.length = width;
     }
 
     @Override
     public double surface() {
-        return Math.PI * this.radius * this.radius;
+        return this.length * this.length;
+    }
+
+    @Override
+    public double circumference() {
+        return (this.length * 4);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return
+            obj != null &&
+            obj.getClass() == this.getClass() &&
+            this.length == ((Square) obj).length;
     }
 }
