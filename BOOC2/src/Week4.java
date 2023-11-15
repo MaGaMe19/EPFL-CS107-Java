@@ -11,6 +11,9 @@ public class Week4 {
 
         Figure square3 = new Square(30);
         System.out.printf("square2 equals square3: %b\n", square2.equals(square3));
+
+        System.out.println(square1 instanceof Figure); // prints true, because Square extends Figure
+        System.out.println(square1.getClass() == Figure.class); // prints false
     }
 }
 
